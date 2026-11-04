@@ -1,0 +1,2439 @@
+{
+ "simulated": true,
+ "notice": "SIMULATED DEMO DATA. Aurora Labs is a fictional organisation. Domains use the IANA-reserved example.org; addresses are documentation ranges (RFC 5737/3849); AS numbers are reserved for documentation (RFC 5398). Nothing here was retrieved from the internet.",
+ "generated_by": "scripts/build_demo.py (real analysers run against a local scripted fixture)",
+ "assessments": [
+  {
+   "id": "demo-link-aurora",
+   "module": "link",
+   "target": "www.aurora-demo.example.org",
+   "status": "completed",
+   "mode": "demo",
+   "created_at": "2026-10-22T09:01:00+00:00",
+   "finished_at": "2026-10-22T09:02:00+00:00",
+   "duration_ms": 182,
+   "summary": {
+    "headline": "HTTP 200 · 21 links · 2 tech indicators",
+    "http_status": 200,
+    "links": 21,
+    "requests_made": 18,
+    "findings": 20
+   },
+   "findings": [
+    {
+     "id": "50b470319a49413e9596dcc08afd5d53",
+     "module": "link",
+     "category": "metadata",
+     "title": "Page title observed",
+     "detail": "Aurora Labs — Demo Company (simulated)",
+     "severity": "info",
+     "evidence_type": "observed",
+     "source": "HTTP response body"
+    },
+    {
+     "id": "0578b8e7eaed40c3a044b706156efacb",
+     "module": "link",
+     "category": "metadata",
+     "title": "Meta description present",
+     "detail": "Simulated demo site for CyberRecon. Aurora Labs is a fictional company.",
+     "severity": "info",
+     "evidence_type": "observed",
+     "source": "HTTP response body"
+    },
+    {
+     "id": "1d20de37ba8c4314b8e68627a1dbe9ec",
+     "module": "link",
+     "category": "headers",
+     "title": "Content-Security-Policy header not observed",
+     "detail": "The Content-Security-Policy response header was absent from the response to this single request.",
+     "severity": "low",
+     "evidence_type": "observed",
+     "source": "HTTP response headers"
+    },
+    {
+     "id": "09f5f211703f41d0ae5e86682b39c0a4",
+     "module": "link",
+     "category": "headers",
+     "title": "X-Frame-Options header not observed",
+     "detail": "The X-Frame-Options response header was absent from the response to this single request.",
+     "severity": "info",
+     "evidence_type": "observed",
+     "source": "HTTP response headers"
+    },
+    {
+     "id": "b8a6b5ed698a4f398f33ffcedb2024c1",
+     "module": "link",
+     "category": "headers",
+     "title": "Referrer-Policy header not observed",
+     "detail": "The Referrer-Policy response header was absent from the response to this single request.",
+     "severity": "info",
+     "evidence_type": "observed",
+     "source": "HTTP response headers"
+    },
+    {
+     "id": "afb7e9abf20742798d94d2727d65c50e",
+     "module": "link",
+     "category": "headers",
+     "title": "Permissions-Policy header not observed",
+     "detail": "The Permissions-Policy response header was absent from the response to this single request.",
+     "severity": "info",
+     "evidence_type": "observed",
+     "source": "HTTP response headers"
+    },
+    {
+     "id": "317f21d459a64321817fdcd72696d62e",
+     "module": "link",
+     "category": "headers",
+     "title": "Cross-Origin-Opener-Policy header not observed",
+     "detail": "The Cross-Origin-Opener-Policy response header was absent from the response to this single request.",
+     "severity": "info",
+     "evidence_type": "observed",
+     "source": "HTTP response headers"
+    },
+    {
+     "id": "bb63651548224d82b052b74bdfe8382d",
+     "module": "link",
+     "category": "headers",
+     "title": "Server software disclosed in headers",
+     "detail": "Server: nginx/1.24.0",
+     "severity": "info",
+     "evidence_type": "observed",
+     "source": "HTTP response headers"
+    },
+    {
+     "id": "8851bc967208406c9735259ad9c1bffa",
+     "module": "link",
+     "category": "cookies",
+     "title": "Cookie 'prefs' without HttpOnly attribute",
+     "detail": "Cookie attributes were read from the Set-Cookie header; values are never stored.",
+     "severity": "low",
+     "evidence_type": "observed",
+     "source": "HTTP response headers"
+    },
+    {
+     "id": "0e4ca3d02eb145f8b2f6c4b031c40c98",
+     "module": "link",
+     "category": "technology",
+     "title": "Technology indicator: Hugo 0.121",
+     "detail": "<meta name=generator>: Hugo 0.121. Indicators are hints, not definitive identification.",
+     "severity": "info",
+     "evidence_type": "observed",
+     "source": "Headers and page markup"
+    },
+    {
+     "id": "4b54635e093742f6bd37b362020886ca",
+     "module": "link",
+     "category": "technology",
+     "title": "Technology indicator: nginx 1.24.0",
+     "detail": "Server header: nginx/1.24.0. Indicators are hints, not definitive identification.",
+     "severity": "info",
+     "evidence_type": "observed",
+     "source": "Headers and page markup"
+    },
+    {
+     "id": "23d545202672436cbd96599feb50d609",
+     "module": "link",
+     "category": "robots",
+     "title": "robots.txt found",
+     "detail": "1 user-agent group(s), 1 disallow rule(s), 1 sitemap reference(s).",
+     "severity": "info",
+     "evidence_type": "observed",
+     "source": "robots.txt"
+    },
+    {
+     "id": "10a32d1b2f584a27afeefdc427d0e115",
+     "module": "link",
+     "category": "sitemap",
+     "title": "Sitemap found",
+     "detail": "urlset with 6 entries.",
+     "severity": "info",
+     "evidence_type": "observed",
+     "source": "sitemap.xml"
+    },
+    {
+     "id": "8be0257232d34025a60208e13ab46ead",
+     "module": "link",
+     "category": "links",
+     "title": "21 unique links discovered",
+     "detail": "14 internal, 1 subdomain, 4 external, 2 other. 14 were actively checked; the rest were discovered only.",
+     "severity": "info",
+     "evidence_type": "observed",
+     "source": "HTTP response body"
+    },
+    {
+     "id": "c0bddebd98b34fb696537a6df4360983",
+     "module": "link",
+     "category": "broken_link",
+     "title": "Link returned HTTP 404",
+     "detail": "http://www.aurora-demo.example.org/legacy/pricing-2019",
+     "severity": "low",
+     "evidence_type": "observed",
+     "source": "Link check (HEAD)"
+    },
+    {
+     "id": "f71de19fa51441a5b5614db373377991",
+     "module": "link",
+     "category": "broken_link",
+     "title": "Link returned HTTP 404",
+     "detail": "http://docs.aurora-demo.example.org/guide",
+     "severity": "low",
+     "evidence_type": "observed",
+     "source": "Link check (HEAD)"
+    },
+    {
+     "id": "a90c2dc3ffd6427f9bbc1d0578baf669",
+     "module": "link",
+     "category": "broken_link",
+     "title": "Link returned HTTP 404",
+     "detail": "http://www.aurora-demo.example.org/favicon.ico",
+     "severity": "low",
+     "evidence_type": "observed",
+     "source": "Link check (HEAD)"
+    },
+    {
+     "id": "4a2183c8d9fc40988f1862f48c6d443e",
+     "module": "link",
+     "category": "broken_link",
+     "title": "Link returned HTTP 404",
+     "detail": "http://www.aurora-demo.example.org/assets/site.css",
+     "severity": "low",
+     "evidence_type": "observed",
+     "source": "Link check (HEAD)"
+    },
+    {
+     "id": "7967bf63b468407794b69cc6160063ed",
+     "module": "link",
+     "category": "broken_link",
+     "title": "Link returned HTTP 404",
+     "detail": "http://www.aurora-demo.example.org/assets/app.js",
+     "severity": "low",
+     "evidence_type": "observed",
+     "source": "Link check (HEAD)"
+    },
+    {
+     "id": "ea9cdabae160427ba29b20c89747cf44",
+     "module": "link",
+     "category": "broken_link",
+     "title": "Link returned HTTP 404",
+     "detail": "http://www.aurora-demo.example.org/assets/logo.png",
+     "severity": "low",
+     "evidence_type": "observed",
+     "source": "Link check (HEAD)"
+    }
+   ],
+   "progress": {
+    "finished": 7,
+    "total": 7,
+    "percent": 100,
+    "current": null
+   },
+   "target_input": "http://www.aurora-demo.example.org/",
+   "authorization": {
+    "confirmed": true,
+    "confirmed_at": "2026-10-22T09:01:00+00:00",
+    "statement": "The user confirmed they are authorised to assess this target before the assessment started."
+   },
+   "scope": {
+    "hosts": [
+     "www.aurora-demo.example.org"
+    ],
+    "note": "Simulated demo scope"
+   },
+   "options": {
+    "check_links": true,
+    "check_external": false,
+    "max_links_to_check": 25
+   },
+   "steps": [
+    {
+     "key": "validate",
+     "label": "Validate target and scope",
+     "status": "done",
+     "started_at": "2026-10-25T09:00:59+00:00",
+     "finished_at": "2026-10-25T09:00:59+00:00",
+     "detail": "Normalised to http://www.aurora-demo.example.org/"
+    },
+    {
+     "key": "fetch",
+     "label": "Fetch the target page",
+     "status": "done",
+     "started_at": "2026-10-25T09:00:59+00:00",
+     "finished_at": "2026-10-25T09:00:59+00:00",
+     "detail": null
+    },
+    {
+     "key": "parse",
+     "label": "Parse metadata, headers and links",
+     "status": "done",
+     "started_at": "2026-10-25T09:00:59+00:00",
+     "finished_at": "2026-10-25T09:00:59+00:00",
+     "detail": "21 unique links found"
+    },
+    {
+     "key": "robots",
+     "label": "Read robots.txt",
+     "status": "done",
+     "started_at": "2026-10-25T09:00:59+00:00",
+     "finished_at": "2026-10-25T09:00:59+00:00",
+     "detail": null
+    },
+    {
+     "key": "sitemap",
+     "label": "Read sitemap.xml",
+     "status": "done",
+     "started_at": "2026-10-25T09:00:59+00:00",
+     "finished_at": "2026-10-25T09:00:59+00:00",
+     "detail": null
+    },
+    {
+     "key": "link_check",
+     "label": "Check discovered links",
+     "status": "done",
+     "started_at": "2026-10-25T09:00:59+00:00",
+     "finished_at": "2026-10-25T09:00:59+00:00",
+     "detail": "15/15 links checked"
+    },
+    {
+     "key": "finalise",
+     "label": "Assemble results",
+     "status": "done",
+     "started_at": "2026-10-25T09:00:59+00:00",
+     "finished_at": "2026-10-25T09:00:59+00:00",
+     "detail": null
+    }
+   ],
+   "error": null,
+   "started_at": "2026-10-22T09:01:00+00:00",
+   "result_status": "completed",
+   "result": {
+    "normalized_url": "http://www.aurora-demo.example.org/",
+    "scheme": "http",
+    "hostname": "www.aurora-demo.example.org",
+    "final_url": "http://www.aurora-demo.example.org/",
+    "redirect_chain": [
+     {
+      "url": "http://www.aurora-demo.example.org/",
+      "status": 200,
+      "location": null,
+      "followed": false,
+      "note": null
+     }
+    ],
+    "http": {
+     "status": 200,
+     "reason": "OK",
+     "response_time_ms": 32,
+     "content_type": "text/html; charset=utf-8",
+     "bytes_read": 1238,
+     "truncated": false,
+     "remote_ip": "203.0.113.10",
+     "message": null
+    },
+    "page": {
+     "title": "Aurora Labs — Demo Company (simulated)",
+     "meta": {
+      "description": "Simulated demo site for CyberRecon. Aurora Labs is a fictional company.",
+      "keywords": null,
+      "robots": null,
+      "generator": "Hugo 0.121",
+      "viewport": null,
+      "author": null,
+      "theme_color": null,
+      "canonical": "http://www.aurora-demo.example.org/",
+      "lang": "en",
+      "charset": "utf-8",
+      "open_graph": {
+       "title": "Aurora Labs (simulated)"
+      },
+      "twitter": {}
+     },
+     "favicon": "http://www.aurora-demo.example.org/favicon.ico",
+     "server_disclosure": "Server: nginx/1.24.0"
+    },
+    "headers": {
+     "selected": {
+      "server": "nginx/1.24.0",
+      "content-type": "text/html; charset=utf-8",
+      "content-length": "1238",
+      "date": "Sun, 25 Oct 2026 09:00:59 GMT",
+      "x-content-type-options": "nosniff"
+     },
+     "security": [
+      {
+       "name": "strict-transport-security",
+       "label": "HSTS",
+       "present": false,
+       "value": null,
+       "applicable": false,
+       "severity": "info",
+       "note": "Only meaningful over HTTPS."
+      },
+      {
+       "name": "content-security-policy",
+       "label": "Content-Security-Policy",
+       "present": false,
+       "value": null,
+       "applicable": true,
+       "severity": "low",
+       "note": null
+      },
+      {
+       "name": "x-frame-options",
+       "label": "X-Frame-Options",
+       "present": false,
+       "value": null,
+       "applicable": true,
+       "severity": "info",
+       "note": null
+      },
+      {
+       "name": "x-content-type-options",
+       "label": "X-Content-Type-Options",
+       "present": true,
+       "value": "nosniff",
+       "applicable": true,
+       "severity": "info",
+       "note": null
+      },
+      {
+       "name": "referrer-policy",
+       "label": "Referrer-Policy",
+       "present": false,
+       "value": null,
+       "applicable": true,
+       "severity": "info",
+       "note": null
+      },
+      {
+       "name": "permissions-policy",
+       "label": "Permissions-Policy",
+       "present": false,
+       "value": null,
+       "applicable": true,
+       "severity": "info",
+       "note": null
+      },
+      {
+       "name": "cross-origin-opener-policy",
+       "label": "Cross-Origin-Opener-Policy",
+       "present": false,
+       "value": null,
+       "applicable": true,
+       "severity": "info",
+       "note": null
+      }
+     ],
+     "cookies": [
+      {
+       "name": "session_demo",
+       "secure": false,
+       "httponly": true,
+       "samesite": null,
+       "path": "/"
+      },
+      {
+       "name": "prefs",
+       "secure": false,
+       "httponly": false,
+       "samesite": null,
+       "path": "/"
+      }
+     ]
+    },
+    "technologies": [
+     {
+      "name": "Hugo",
+      "category": "CMS / generator",
+      "confidence": "medium",
+      "evidence": [
+       "<meta name=generator>: Hugo 0.121"
+      ],
+      "version": "0.121"
+     },
+     {
+      "name": "nginx",
+      "category": "Web server / edge",
+      "confidence": "medium",
+      "evidence": [
+       "Server header: nginx/1.24.0"
+      ],
+      "version": "1.24.0"
+     }
+    ],
+    "links": [
+     {
+      "url": "http://www.aurora-demo.example.org/products",
+      "kind": "internal",
+      "sources": [
+       "a"
+      ],
+      "count": 1,
+      "text": "Products",
+      "check": {
+       "state": "checked",
+       "status": 200,
+       "method": "HEAD",
+       "time_ms": 5,
+       "redirects": 0
+      }
+     },
+     {
+      "url": "http://www.aurora-demo.example.org/about",
+      "kind": "internal",
+      "sources": [
+       "a"
+      ],
+      "count": 1,
+      "text": "About",
+      "check": {
+       "state": "checked",
+       "status": 200,
+       "method": "HEAD",
+       "time_ms": 9,
+       "redirects": 0
+      }
+     },
+     {
+      "url": "http://www.aurora-demo.example.org/careers",
+      "kind": "internal",
+      "sources": [
+       "a"
+      ],
+      "count": 1,
+      "text": "Careers",
+      "check": {
+       "state": "checked",
+       "status": 200,
+       "method": "HEAD",
+       "time_ms": 8,
+       "redirects": 0
+      }
+     },
+     {
+      "url": "http://www.aurora-demo.example.org/blog/",
+      "kind": "internal",
+      "sources": [
+       "a"
+      ],
+      "count": 1,
+      "text": "Blog",
+      "check": {
+       "state": "checked",
+       "status": 200,
+       "method": "HEAD",
+       "time_ms": 7,
+       "redirects": 0
+      }
+     },
+     {
+      "url": "http://www.aurora-demo.example.org/contact",
+      "kind": "internal",
+      "sources": [
+       "a"
+      ],
+      "count": 1,
+      "text": "Contact",
+      "check": {
+       "state": "checked",
+       "status": 200,
+       "method": "HEAD",
+       "time_ms": 7,
+       "redirects": 0
+      }
+     },
+     {
+      "url": "http://www.aurora-demo.example.org/products/beacon",
+      "kind": "internal",
+      "sources": [
+       "a"
+      ],
+      "count": 1,
+      "text": "Beacon",
+      "check": {
+       "state": "checked",
+       "status": 200,
+       "method": "HEAD",
+       "time_ms": 8,
+       "redirects": 0
+      }
+     },
+     {
+      "url": "http://www.aurora-demo.example.org/legacy/pricing-2019",
+      "kind": "internal",
+      "sources": [
+       "a"
+      ],
+      "count": 1,
+      "text": "Old pricing",
+      "check": {
+       "state": "checked",
+       "status": 404,
+       "method": "HEAD",
+       "time_ms": 10,
+       "redirects": 0
+      }
+     },
+     {
+      "url": "http://www.aurora-demo.example.org/press",
+      "kind": "internal",
+      "sources": [
+       "a"
+      ],
+      "count": 1,
+      "text": "Press",
+      "check": {
+       "state": "checked",
+       "status": 200,
+       "method": "HEAD",
+       "time_ms": 7,
+       "redirects": 0
+      }
+     },
+     {
+      "url": "http://www.aurora-demo.example.org/admin/",
+      "kind": "internal",
+      "sources": [
+       "a"
+      ],
+      "count": 1,
+      "text": "Staff",
+      "check": {
+       "state": "skipped",
+       "reason": "robots_disallow",
+       "detail": "Disallowed by robots.txt for this crawler; not requested."
+      }
+     },
+     {
+      "url": "http://docs.aurora-demo.example.org/guide",
+      "kind": "subdomain",
+      "sources": [
+       "a"
+      ],
+      "count": 1,
+      "text": "Docs",
+      "check": {
+       "state": "checked",
+       "status": 404,
+       "method": "HEAD",
+       "time_ms": 5,
+       "redirects": 0
+      }
+     },
+     {
+      "url": "https://partner-one.example.net/aurora",
+      "kind": "external",
+      "sources": [
+       "a"
+      ],
+      "count": 1,
+      "text": "Partner One",
+      "check": {
+       "state": "not_checked",
+       "reason": "external_disabled",
+       "detail": "External link checking is off."
+      }
+     },
+     {
+      "url": "https://status.example.com/aurora",
+      "kind": "external",
+      "sources": [
+       "a"
+      ],
+      "count": 1,
+      "text": "Status",
+      "check": {
+       "state": "not_checked",
+       "reason": "external_disabled",
+       "detail": "External link checking is off."
+      }
+     },
+     {
+      "url": "https://social.example.com/aurora-labs",
+      "kind": "external",
+      "sources": [
+       "a"
+      ],
+      "count": 1,
+      "text": "Social",
+      "check": {
+       "state": "not_checked",
+       "reason": "external_disabled",
+       "detail": "External link checking is off."
+      }
+     },
+     {
+      "url": "mailto:hello@aurora-demo.example.org",
+      "kind": "mailto",
+      "sources": [
+       "a"
+      ],
+      "count": 1,
+      "text": "Email us",
+      "check": {
+       "state": "not_checked",
+       "reason": "not_http",
+       "detail": "Only http(s) links can be checked."
+      }
+     },
+     {
+      "url": "tel:+15550100",
+      "kind": "tel",
+      "sources": [
+       "a"
+      ],
+      "count": 1,
+      "text": "Call",
+      "check": {
+       "state": "not_checked",
+       "reason": "not_http",
+       "detail": "Only http(s) links can be checked."
+      }
+     },
+     {
+      "url": "http://www.aurora-demo.example.org/",
+      "kind": "internal",
+      "sources": [
+       "link"
+      ],
+      "count": 1,
+      "text": null,
+      "check": {
+       "state": "checked",
+       "status": 200,
+       "method": "HEAD",
+       "time_ms": 8,
+       "redirects": 0
+      }
+     },
+     {
+      "url": "http://www.aurora-demo.example.org/favicon.ico",
+      "kind": "internal",
+      "sources": [
+       "link"
+      ],
+      "count": 1,
+      "text": null,
+      "check": {
+       "state": "checked",
+       "status": 404,
+       "method": "HEAD",
+       "time_ms": 7,
+       "redirects": 0
+      }
+     },
+     {
+      "url": "http://www.aurora-demo.example.org/assets/site.css",
+      "kind": "internal",
+      "sources": [
+       "link"
+      ],
+      "count": 1,
+      "text": null,
+      "check": {
+       "state": "checked",
+       "status": 404,
+       "method": "HEAD",
+       "time_ms": 4,
+       "redirects": 0
+      }
+     },
+     {
+      "url": "http://www.aurora-demo.example.org/assets/app.js",
+      "kind": "internal",
+      "sources": [
+       "script"
+      ],
+      "count": 1,
+      "text": null,
+      "check": {
+       "state": "checked",
+       "status": 404,
+       "method": "HEAD",
+       "time_ms": 8,
+       "redirects": 0
+      }
+     },
+     {
+      "url": "https://cdn.example.net/analytics.js",
+      "kind": "external",
+      "sources": [
+       "script"
+      ],
+      "count": 1,
+      "text": null,
+      "check": {
+       "state": "not_checked",
+       "reason": "external_disabled",
+       "detail": "External link checking is off."
+      }
+     },
+     {
+      "url": "http://www.aurora-demo.example.org/assets/logo.png",
+      "kind": "internal",
+      "sources": [
+       "img"
+      ],
+      "count": 1,
+      "text": null,
+      "check": {
+       "state": "checked",
+       "status": 404,
+       "method": "HEAD",
+       "time_ms": 5,
+       "redirects": 0
+      }
+     }
+    ],
+    "link_summary": {
+     "discovered": 21,
+     "by_kind": {
+      "internal": 14,
+      "subdomain": 1,
+      "external": 4,
+      "mailto": 1,
+      "tel": 1
+     },
+     "by_source": {
+      "a": 15,
+      "link": 3,
+      "script": 2,
+      "img": 1
+     },
+     "checked": 14,
+     "ok": 8,
+     "broken": 6,
+     "blocked": 0,
+     "skipped": 1,
+     "failed": 0,
+     "not_checked": 6
+    },
+    "link_check": {
+     "enabled": true,
+     "external_included": false,
+     "limit": 25
+    },
+    "links_discarded_over_cap": 0,
+    "robots": {
+     "status": "found",
+     "url": "http://www.aurora-demo.example.org/robots.txt",
+     "http_status": 200,
+     "size_bytes": 103,
+     "groups": [
+      {
+       "user_agents": [
+        "*"
+       ],
+       "allow": 1,
+       "disallow": 1,
+       "crawl_delay": null,
+       "rules": [
+        {
+         "type": "disallow",
+         "path": "/admin/"
+        },
+        {
+         "type": "allow",
+         "path": "/"
+        }
+       ]
+      }
+     ],
+     "sitemaps": [
+      "http://www.aurora-demo.example.org/sitemap.xml"
+     ],
+     "excerpt": "User-agent: *\nDisallow: /admin/\nAllow: /\nSitemap: http://www.aurora-demo.example.org/sitemap.xml\n"
+    },
+    "sitemap": {
+     "status": "parsed",
+     "url": "http://www.aurora-demo.example.org/sitemap.xml",
+     "http_status": 200,
+     "type": "urlset",
+     "url_count": 6,
+     "child_sitemaps": 0,
+     "sample": [
+      "http://www.aurora-demo.example.org/",
+      "http://www.aurora-demo.example.org/products",
+      "http://www.aurora-demo.example.org/about",
+      "http://www.aurora-demo.example.org/careers",
+      "http://www.aurora-demo.example.org/blog/",
+      "http://www.aurora-demo.example.org/contact"
+     ],
+     "note": null,
+     "truncated": false
+    },
+    "requests_made": 18
+   },
+   "errors": [],
+   "sources": [
+    {
+     "id": "821a4f959aa342a6acfc193b632138e9",
+     "name": "Target website (simulated)",
+     "kind": "http",
+     "reference": "http://www.aurora-demo.example.org/",
+     "status": "ok",
+     "detail": "HTTP 200 in 32 ms",
+     "retrieved_at": "2026-10-25T09:00:59+00:00"
+    },
+    {
+     "id": "a48709aad76440a39d488fe39b7f9d28",
+     "name": "sitemap.xml (simulated)",
+     "kind": "http",
+     "reference": "http://www.aurora-demo.example.org/sitemap.xml",
+     "status": "ok",
+     "detail": "6 URLs",
+     "retrieved_at": "2026-10-25T09:00:59+00:00"
+    },
+    {
+     "id": "abbbcbef3e0b4916b23b2cdb37f50345",
+     "name": "robots.txt (simulated)",
+     "kind": "http",
+     "reference": "http://www.aurora-demo.example.org/robots.txt",
+     "status": "ok",
+     "detail": "HTTP 200, 103 bytes",
+     "retrieved_at": "2026-10-25T09:00:59+00:00"
+    },
+    {
+     "id": "d3c5d264463247e8858e2e3c335b439c",
+     "name": "Link checks (HEAD) (simulated)",
+     "kind": "http",
+     "reference": null,
+     "status": "ok",
+     "detail": "Up to 25 links, external excluded; robots.txt honoured.",
+     "retrieved_at": "2026-10-25T09:00:59+00:00"
+    }
+   ],
+   "reports": [],
+   "simulated": true
+  },
+  {
+   "id": "demo-infrastructure-aurora",
+   "module": "infrastructure",
+   "target": "www.aurora-demo.example.org",
+   "status": "completed",
+   "mode": "demo",
+   "created_at": "2026-10-23T09:01:00+00:00",
+   "finished_at": "2026-10-23T09:02:00+00:00",
+   "duration_ms": 64,
+   "summary": {
+    "headline": "3 IP(s) · 17 graph nodes · cert 24d left",
+    "ips": 3,
+    "nodes": 17,
+    "unavailable_sources": 0,
+    "findings": 20
+   },
+   "findings": [
+    {
+     "id": "9354cf25dfb44151af6f93bd1122aa06",
+     "module": "infrastructure",
+     "category": "dns",
+     "title": "2 IPv4 and 1 IPv6 address record(s)",
+     "detail": "203.0.113.10, 203.0.113.11, 2001:db8:a0:1::10",
+     "severity": "info",
+     "evidence_type": "observed",
+     "source": "DNS A/AAAA lookup"
+    },
+    {
+     "id": "02fa8c38d2934a6c978f003301fc3e6d",
+     "module": "infrastructure",
+     "category": "dns",
+     "title": "2 nameserver(s)",
+     "detail": "ns1.aurora-demo.example.org, ns2.aurora-demo.example.org",
+     "severity": "info",
+     "evidence_type": "observed",
+     "source": "DNS NS lookup"
+    },
+    {
+     "id": "197e5f80328b4bdea2b98a1c49ebde06",
+     "module": "infrastructure",
+     "category": "email",
+     "title": "2 mail exchanger(s)",
+     "detail": "10 mail.aurora-demo.example.org, 20 mail2.aurora-demo.example.org",
+     "severity": "info",
+     "evidence_type": "observed",
+     "source": "DNS MX lookup"
+    },
+    {
+     "id": "c549f7dd282a4726b582443ddb686130",
+     "module": "infrastructure",
+     "category": "email",
+     "title": "SPF record published",
+     "detail": "v=spf1 include:_spf.aurora-demo.example.org ~all",
+     "severity": "info",
+     "evidence_type": "observed",
+     "source": "DNS TXT lookup"
+    },
+    {
+     "id": "3893ea4fecc944058ca67d1d6753cd3c",
+     "module": "infrastructure",
+     "category": "email",
+     "title": "DMARC record published",
+     "detail": "v=DMARC1; p=none; rua=mailto:dmarc@aurora-demo.example.org",
+     "severity": "info",
+     "evidence_type": "observed",
+     "source": "DNS TXT lookup (_dmarc)"
+    },
+    {
+     "id": "97fa1f995943425b90eb6f51153e9ac9",
+     "module": "infrastructure",
+     "category": "registration",
+     "title": "Registrar: Demo Registrar Ltd (simulated)",
+     "detail": "Created 2016-02-11T00:00:00Z; expires 2026-12-05T09:00:59Z; status: client transfer prohibited.",
+     "severity": "info",
+     "evidence_type": "third_party",
+     "source": "RDAP"
+    },
+    {
+     "id": "332424613ff14a8783237f33e8b80874",
+     "module": "infrastructure",
+     "category": "registration",
+     "title": "Domain registration expires in 40 days",
+     "detail": "2026-12-05T09:00:59Z",
+     "severity": "low",
+     "evidence_type": "third_party",
+     "source": "RDAP"
+    },
+    {
+     "id": "72b65c858ce74187b9491a4ea80c9e9f",
+     "module": "infrastructure",
+     "category": "registration",
+     "title": "Registrant details redacted",
+     "detail": "Registrant contact data is not published (common under privacy regulation); none is shown.",
+     "severity": "info",
+     "evidence_type": "third_party",
+     "source": "RDAP"
+    },
+    {
+     "id": "ab25d8732126476491c2ad8c85c8b3e3",
+     "module": "infrastructure",
+     "category": "ip",
+     "title": "203.0.113.10 is announced by AS64500 (AURORA-HOSTING-DEMO, ZZ)",
+     "detail": "Prefix 203.0.113.0/24; registry simulated. Reported by Team Cymru's public IP-to-ASN service.",
+     "severity": "info",
+     "evidence_type": "third_party",
+     "source": "Team Cymru IP-to-ASN"
+    },
+    {
+     "id": "d7a9bc817b844dd595bee9b01449f771",
+     "module": "infrastructure",
+     "category": "ip",
+     "title": "Network AURORA-HOSTING-DEMO-NET for 203.0.113.10",
+     "detail": "Aurora Hosting Demo (fictional); country ZZ.",
+     "severity": "info",
+     "evidence_type": "third_party",
+     "source": "RDAP (IP)"
+    },
+    {
+     "id": "618a5ff492dd4aa487b613b16375ac77",
+     "module": "infrastructure",
+     "category": "geolocation",
+     "title": "Estimated location for 203.0.113.10: Demo City, Zedland (fictional)",
+     "detail": "SIMULATED. IP geolocation is an approximate estimate and does not identify a precise or physical location.",
+     "severity": "info",
+     "evidence_type": "estimate",
+     "source": "simulated-geoip"
+    },
+    {
+     "id": "67553bd8dc1849318aa72a5cd6f98989",
+     "module": "infrastructure",
+     "category": "ip",
+     "title": "203.0.113.11 is announced by AS64500 (AURORA-HOSTING-DEMO, ZZ)",
+     "detail": "Prefix 203.0.113.0/24; registry simulated. Reported by Team Cymru's public IP-to-ASN service.",
+     "severity": "info",
+     "evidence_type": "third_party",
+     "source": "Team Cymru IP-to-ASN"
+    },
+    {
+     "id": "cb83ca1b29cd46ceb7e921c5834363e3",
+     "module": "infrastructure",
+     "category": "ip",
+     "title": "Network AURORA-HOSTING-DEMO-NET for 203.0.113.11",
+     "detail": "Aurora Hosting Demo (fictional); country ZZ.",
+     "severity": "info",
+     "evidence_type": "third_party",
+     "source": "RDAP (IP)"
+    },
+    {
+     "id": "e68e34b0958f4975b683fb2f6f01020b",
+     "module": "infrastructure",
+     "category": "geolocation",
+     "title": "Estimated location for 203.0.113.11: Demo City, Zedland (fictional)",
+     "detail": "SIMULATED. IP geolocation is an approximate estimate and does not identify a precise or physical location.",
+     "severity": "info",
+     "evidence_type": "estimate",
+     "source": "simulated-geoip"
+    },
+    {
+     "id": "77eaf579ecac45abad36bb4d9021dac7",
+     "module": "infrastructure",
+     "category": "ip",
+     "title": "2001:db8:a0:1::10 is announced by AS64500 (AURORA-HOSTING-DEMO, ZZ)",
+     "detail": "Prefix 2001:db8:a0::/48; registry simulated. Reported by Team Cymru's public IP-to-ASN service.",
+     "severity": "info",
+     "evidence_type": "third_party",
+     "source": "Team Cymru IP-to-ASN"
+    },
+    {
+     "id": "8b5a777e403444f2b405961a7655259c",
+     "module": "infrastructure",
+     "category": "ip",
+     "title": "Network AURORA-HOSTING-DEMO-NET for 2001:db8:a0:1::10",
+     "detail": "Aurora Hosting Demo (fictional); country ZZ.",
+     "severity": "info",
+     "evidence_type": "third_party",
+     "source": "RDAP (IP)"
+    },
+    {
+     "id": "e4dc97bd5a744e109c6e0208419a1902",
+     "module": "infrastructure",
+     "category": "geolocation",
+     "title": "Estimated location for 2001:db8:a0:1::10: Demo City, Zedland (fictional)",
+     "detail": "SIMULATED. IP geolocation is an approximate estimate and does not identify a precise or physical location.",
+     "severity": "info",
+     "evidence_type": "estimate",
+     "source": "simulated-geoip"
+    },
+    {
+     "id": "2910c8f40b0a4323b0d0ca04efe0a1fb",
+     "module": "infrastructure",
+     "category": "tls",
+     "title": "Certificate issued by Demo Certificate Authority (simulated)",
+     "detail": "Subject www.aurora-demo.example.org; valid 2026-08-26 → 2026-11-18; TLSv1.3.",
+     "severity": "info",
+     "evidence_type": "observed",
+     "source": "TLS handshake"
+    },
+    {
+     "id": "02603f1c3af34ff7a638ebf61bcaf522",
+     "module": "infrastructure",
+     "category": "tls",
+     "title": "Certificate expires in 24 days",
+     "detail": "2026-11-18T09:00:59.563689+00:00",
+     "severity": "low",
+     "evidence_type": "observed",
+     "source": "TLS handshake"
+    },
+    {
+     "id": "342988b482e94108b836e8ba45727fb2",
+     "module": "infrastructure",
+     "category": "subdomains",
+     "title": "3 subdomain(s) reported by simulated-ct-index",
+     "detail": "2 of the first 3 resolved in DNS during this assessment. Reported names.",
+     "severity": "info",
+     "evidence_type": "third_party",
+     "source": "simulated-ct-index"
+    }
+   ],
+   "progress": {
+    "finished": 8,
+    "total": 8,
+    "percent": 100,
+    "current": null
+   },
+   "target_input": "www.aurora-demo.example.org",
+   "authorization": {
+    "confirmed": true,
+    "confirmed_at": "2026-10-23T09:01:00+00:00",
+    "statement": "The user confirmed they are authorised to assess this target before the assessment started."
+   },
+   "scope": {
+    "hosts": [
+     "www.aurora-demo.example.org"
+    ]
+   },
+   "options": {
+    "include_http": false
+   },
+   "steps": [
+    {
+     "key": "validate",
+     "label": "Validate target",
+     "status": "done",
+     "started_at": "2026-10-25T09:00:59+00:00",
+     "finished_at": "2026-10-25T09:00:59+00:00",
+     "detail": "Hostname www.aurora-demo.example.org · registrable domain example.org"
+    },
+    {
+     "key": "dns",
+     "label": "Query DNS records",
+     "status": "done",
+     "started_at": "2026-10-25T09:00:59+00:00",
+     "finished_at": "2026-10-25T09:00:59+00:00",
+     "detail": "9 queries; 3 address(es)"
+    },
+    {
+     "key": "registration",
+     "label": "Look up registration (RDAP)",
+     "status": "done",
+     "started_at": "2026-10-25T09:00:59+00:00",
+     "finished_at": "2026-10-25T09:00:59+00:00",
+     "detail": null
+    },
+    {
+     "key": "ip_intel",
+     "label": "Resolve IP ownership and network",
+     "status": "done",
+     "started_at": "2026-10-25T09:00:59+00:00",
+     "finished_at": "2026-10-25T09:00:59+00:00",
+     "detail": null
+    },
+    {
+     "key": "tls",
+     "label": "Inspect TLS certificate",
+     "status": "done",
+     "started_at": "2026-10-25T09:00:59+00:00",
+     "finished_at": "2026-10-25T09:00:59+00:00",
+     "detail": null
+    },
+    {
+     "key": "http",
+     "label": "Observe HTTP technology indicators",
+     "status": "skipped",
+     "started_at": null,
+     "finished_at": "2026-10-25T09:00:59+00:00",
+     "detail": "Disabled"
+    },
+    {
+     "key": "subdomains",
+     "label": "Passive subdomain lookup",
+     "status": "done",
+     "started_at": "2026-10-25T09:00:59+00:00",
+     "finished_at": "2026-10-25T09:00:59+00:00",
+     "detail": null
+    },
+    {
+     "key": "graph",
+     "label": "Build relationship graph",
+     "status": "done",
+     "started_at": "2026-10-25T09:00:59+00:00",
+     "finished_at": "2026-10-25T09:00:59+00:00",
+     "detail": "17 nodes, 21 edges"
+    }
+   ],
+   "error": null,
+   "started_at": "2026-10-23T09:01:00+00:00",
+   "result_status": "completed",
+   "result": {
+    "hostname": "www.aurora-demo.example.org",
+    "apex_domain": "example.org",
+    "is_ip_target": false,
+    "scheme": "https",
+    "dns": {
+     "resolver": "simulated resolver",
+     "queried_at": "2026-10-25T09:00:59+00:00",
+     "records": [
+      {
+       "type": "A",
+       "name": "www.aurora-demo.example.org",
+       "status": "ok",
+       "values": [
+        {
+         "value": "203.0.113.10",
+         "ttl": 300
+        },
+        {
+         "value": "203.0.113.11",
+         "ttl": 300
+        }
+       ],
+       "error": null,
+       "queried_at": "2026-10-25T08:00:00+00:00"
+      },
+      {
+       "type": "AAAA",
+       "name": "www.aurora-demo.example.org",
+       "status": "ok",
+       "values": [
+        {
+         "value": "2001:db8:a0:1::10",
+         "ttl": 300
+        }
+       ],
+       "error": null,
+       "queried_at": "2026-10-25T08:00:00+00:00"
+      },
+      {
+       "type": "CNAME",
+       "name": "www.aurora-demo.example.org",
+       "status": "no_answer",
+       "values": [],
+       "error": null,
+       "queried_at": "2026-10-25T08:00:00+00:00"
+      },
+      {
+       "type": "MX",
+       "name": "example.org",
+       "status": "ok",
+       "values": [
+        {
+         "value": "10 mail.aurora-demo.example.org",
+         "ttl": 300
+        },
+        {
+         "value": "20 mail2.aurora-demo.example.org",
+         "ttl": 300
+        }
+       ],
+       "error": null,
+       "queried_at": "2026-10-25T08:00:00+00:00"
+      },
+      {
+       "type": "NS",
+       "name": "example.org",
+       "status": "ok",
+       "values": [
+        {
+         "value": "ns1.aurora-demo.example.org",
+         "ttl": 300
+        },
+        {
+         "value": "ns2.aurora-demo.example.org",
+         "ttl": 300
+        }
+       ],
+       "error": null,
+       "queried_at": "2026-10-25T08:00:00+00:00"
+      },
+      {
+       "type": "TXT",
+       "name": "example.org",
+       "status": "ok",
+       "values": [
+        {
+         "value": "v=spf1 include:_spf.aurora-demo.example.org ~all",
+         "ttl": 300
+        },
+        {
+         "value": "aurora-demo-site-verification=SIMULATED",
+         "ttl": 300
+        }
+       ],
+       "error": null,
+       "queried_at": "2026-10-25T08:00:00+00:00"
+      },
+      {
+       "type": "SOA",
+       "name": "example.org",
+       "status": "no_answer",
+       "values": [],
+       "error": null,
+       "queried_at": "2026-10-25T08:00:00+00:00"
+      },
+      {
+       "type": "CAA",
+       "name": "example.org",
+       "status": "ok",
+       "values": [
+        {
+         "value": "0 issue \"letsencrypt.example\"",
+         "ttl": 300
+        }
+       ],
+       "error": null,
+       "queried_at": "2026-10-25T08:00:00+00:00"
+      },
+      {
+       "type": "TXT",
+       "name": "_dmarc.example.org",
+       "status": "ok",
+       "values": [
+        {
+         "value": "v=DMARC1; p=none; rua=mailto:dmarc@aurora-demo.example.org",
+         "ttl": 300
+        }
+       ],
+       "error": null,
+       "queried_at": "2026-10-25T08:00:00+00:00"
+      }
+     ]
+    },
+    "registration": {
+     "status": "found",
+     "source": "simulated://rdap/example.org",
+     "queried_domain": "example.org",
+     "domain": "example.org",
+     "registrar": "Demo Registrar Ltd (simulated)",
+     "registrar_iana_id": "0000",
+     "created": "2016-02-11T00:00:00Z",
+     "expires": "2026-12-05T09:00:59Z",
+     "updated": "2026-02-01T00:00:00Z",
+     "domain_status": [
+      "client transfer prohibited"
+     ],
+     "nameservers": [
+      "ns1.aurora-demo.example.org",
+      "ns2.aurora-demo.example.org"
+     ],
+     "registrant_org": null,
+     "registrant_redacted": true
+    },
+    "ips": [
+     {
+      "ip": "203.0.113.10",
+      "version": 4,
+      "public": true,
+      "ptr": null,
+      "asn": {
+       "asn": 64500,
+       "all_asns": [
+        64500
+       ],
+       "prefix": "203.0.113.0/24",
+       "country": "ZZ",
+       "registry": "simulated",
+       "allocated": "2015-01-01",
+       "name": "AURORA-HOSTING-DEMO, ZZ"
+      },
+      "network": {
+       "status": "found",
+       "source": "simulated://rdap/ip",
+       "name": "AURORA-HOSTING-DEMO-NET",
+       "handle": "DEMO-NET-1",
+       "country": "ZZ",
+       "organizations": [
+        "Aurora Hosting Demo (fictional)"
+       ]
+      },
+      "geo": {
+       "country": "Zedland (fictional)",
+       "city": "Demo City",
+       "region": null,
+       "latitude": null,
+       "longitude": null,
+       "provider": "simulated-geoip",
+       "estimate": true,
+       "note": "SIMULATED. IP geolocation is an approximate estimate and does not identify a precise or physical location."
+      },
+      "asn_status": "ok",
+      "network_status": "ok",
+      "geo_status": "ok",
+      "messages": {}
+     },
+     {
+      "ip": "203.0.113.11",
+      "version": 4,
+      "public": true,
+      "ptr": null,
+      "asn": {
+       "asn": 64500,
+       "all_asns": [
+        64500
+       ],
+       "prefix": "203.0.113.0/24",
+       "country": "ZZ",
+       "registry": "simulated",
+       "allocated": "2015-01-01",
+       "name": "AURORA-HOSTING-DEMO, ZZ"
+      },
+      "network": {
+       "status": "found",
+       "source": "simulated://rdap/ip",
+       "name": "AURORA-HOSTING-DEMO-NET",
+       "handle": "DEMO-NET-1",
+       "country": "ZZ",
+       "organizations": [
+        "Aurora Hosting Demo (fictional)"
+       ]
+      },
+      "geo": {
+       "country": "Zedland (fictional)",
+       "city": "Demo City",
+       "region": null,
+       "latitude": null,
+       "longitude": null,
+       "provider": "simulated-geoip",
+       "estimate": true,
+       "note": "SIMULATED. IP geolocation is an approximate estimate and does not identify a precise or physical location."
+      },
+      "asn_status": "ok",
+      "network_status": "ok",
+      "geo_status": "ok",
+      "messages": {}
+     },
+     {
+      "ip": "2001:db8:a0:1::10",
+      "version": 6,
+      "public": true,
+      "ptr": null,
+      "asn": {
+       "asn": 64500,
+       "all_asns": [
+        64500
+       ],
+       "prefix": "2001:db8:a0::/48",
+       "country": "ZZ",
+       "registry": "simulated",
+       "allocated": "2015-01-01",
+       "name": "AURORA-HOSTING-DEMO, ZZ"
+      },
+      "network": {
+       "status": "found",
+       "source": "simulated://rdap/ip",
+       "name": "AURORA-HOSTING-DEMO-NET",
+       "handle": "DEMO-NET-1",
+       "country": "ZZ",
+       "organizations": [
+        "Aurora Hosting Demo (fictional)"
+       ]
+      },
+      "geo": {
+       "country": "Zedland (fictional)",
+       "city": "Demo City",
+       "region": null,
+       "latitude": null,
+       "longitude": null,
+       "provider": "simulated-geoip",
+       "estimate": true,
+       "note": "SIMULATED. IP geolocation is an approximate estimate and does not identify a precise or physical location."
+      },
+      "asn_status": "ok",
+      "network_status": "ok",
+      "geo_status": "ok",
+      "messages": {}
+     }
+    ],
+    "tls": {
+     "status": "ok",
+     "port": 443,
+     "connected_ip": "203.0.113.10",
+     "verification": {
+      "ok": true,
+      "error": null
+     },
+     "protocol": "TLSv1.3",
+     "cipher": "TLS_AES_256_GCM_SHA384",
+     "subject_cn": "www.aurora-demo.example.org",
+     "subject_org": null,
+     "issuer_cn": "Demo Intermediate CA",
+     "issuer_org": "Demo Certificate Authority (simulated)",
+     "issuer_country": "ZZ",
+     "not_before": "2026-08-26T09:00:59.563675+00:00",
+     "not_after": "2026-11-18T09:00:59.563689+00:00",
+     "days_remaining": 24,
+     "expired": false,
+     "not_yet_valid": false,
+     "san": [
+      "www.aurora-demo.example.org",
+      "aurora-demo.example.org",
+      "api.aurora-demo.example.org"
+     ],
+     "san_count": 3,
+     "serial": "00DEMO",
+     "signature_hash": "sha256",
+     "public_key": {
+      "type": "EC",
+      "bits": 256
+     },
+     "fingerprint_sha256": "dededededededededededededededededededededededededededededededede",
+     "self_signed": false,
+     "hostname_match": true
+    },
+    "http": {
+     "status": "skipped"
+    },
+    "technologies": [],
+    "subdomains": {
+     "status": "ok",
+     "provider": "simulated-ct-index",
+     "reference": "https://example.invalid/ct",
+     "basis": "Reported names.",
+     "items": [
+      {
+       "name": "api.aurora-demo.example.org",
+       "sources": [
+        "simulated-ct-index"
+       ],
+       "verification": "dns_resolved",
+       "resolves_to": [
+        "203.0.113.11"
+       ]
+      },
+      {
+       "name": "staging.aurora-demo.example.org",
+       "sources": [
+        "simulated-ct-index"
+       ],
+       "verification": "dns_resolved",
+       "resolves_to": [
+        "198.51.100.77"
+       ]
+      },
+      {
+       "name": "old-portal.aurora-demo.example.org",
+       "sources": [
+        "simulated-ct-index"
+       ],
+       "verification": "dns_unresolved"
+      }
+     ],
+     "total_reported": 3,
+     "truncated": false,
+     "dns_checked": 3,
+     "dns_resolved": 2
+    },
+    "graph": {
+     "nodes": [
+      {
+       "id": "domain:example.org",
+       "type": "domain",
+       "label": "example.org",
+       "layer": 0,
+       "data": {
+        "role": "registrable domain",
+        "registration": {
+         "status": "found",
+         "source": "simulated://rdap/example.org",
+         "queried_domain": "example.org",
+         "domain": "example.org",
+         "registrar": "Demo Registrar Ltd (simulated)",
+         "registrar_iana_id": "0000",
+         "created": "2016-02-11T00:00:00Z",
+         "expires": "2026-12-05T09:00:59Z",
+         "updated": "2026-02-01T00:00:00Z",
+         "domain_status": [
+          "client transfer prohibited"
+         ],
+         "nameservers": [
+          "ns1.aurora-demo.example.org",
+          "ns2.aurora-demo.example.org"
+         ],
+         "registrant_org": null,
+         "registrant_redacted": true
+        }
+       }
+      },
+      {
+       "id": "host:www.aurora-demo.example.org",
+       "type": "hostname",
+       "label": "www.aurora-demo.example.org",
+       "layer": 1,
+       "data": {
+        "role": "assessed hostname"
+       }
+      },
+      {
+       "id": "ip:203.0.113.10",
+       "type": "ip",
+       "label": "203.0.113.10",
+       "layer": 3,
+       "data": {
+        "version": 4,
+        "public": true,
+        "network": {
+         "status": "found",
+         "source": "simulated://rdap/ip",
+         "name": "AURORA-HOSTING-DEMO-NET",
+         "handle": "DEMO-NET-1",
+         "country": "ZZ",
+         "organizations": [
+          "Aurora Hosting Demo (fictional)"
+         ]
+        },
+        "geolocation": {
+         "country": "Zedland (fictional)",
+         "city": "Demo City",
+         "region": null,
+         "latitude": null,
+         "longitude": null,
+         "provider": "simulated-geoip",
+         "estimate": true,
+         "note": "SIMULATED. IP geolocation is an approximate estimate and does not identify a precise or physical location."
+        }
+       }
+      },
+      {
+       "id": "ip:203.0.113.11",
+       "type": "ip",
+       "label": "203.0.113.11",
+       "layer": 3,
+       "data": {
+        "version": 4,
+        "public": true,
+        "network": {
+         "status": "found",
+         "source": "simulated://rdap/ip",
+         "name": "AURORA-HOSTING-DEMO-NET",
+         "handle": "DEMO-NET-1",
+         "country": "ZZ",
+         "organizations": [
+          "Aurora Hosting Demo (fictional)"
+         ]
+        },
+        "geolocation": {
+         "country": "Zedland (fictional)",
+         "city": "Demo City",
+         "region": null,
+         "latitude": null,
+         "longitude": null,
+         "provider": "simulated-geoip",
+         "estimate": true,
+         "note": "SIMULATED. IP geolocation is an approximate estimate and does not identify a precise or physical location."
+        }
+       }
+      },
+      {
+       "id": "ip:2001:db8:a0:1::10",
+       "type": "ip",
+       "label": "2001:db8:a0:1::10",
+       "layer": 3,
+       "data": {
+        "version": 6,
+        "public": true,
+        "network": {
+         "status": "found",
+         "source": "simulated://rdap/ip",
+         "name": "AURORA-HOSTING-DEMO-NET",
+         "handle": "DEMO-NET-1",
+         "country": "ZZ",
+         "organizations": [
+          "Aurora Hosting Demo (fictional)"
+         ]
+        },
+        "geolocation": {
+         "country": "Zedland (fictional)",
+         "city": "Demo City",
+         "region": null,
+         "latitude": null,
+         "longitude": null,
+         "provider": "simulated-geoip",
+         "estimate": true,
+         "note": "SIMULATED. IP geolocation is an approximate estimate and does not identify a precise or physical location."
+        }
+       }
+      },
+      {
+       "id": "dns:NS:ns1.aurora-demo.example.org",
+       "type": "dns_record",
+       "label": "NS ns1.aurora-demo.example.org",
+       "layer": 2,
+       "data": {
+        "record_type": "NS",
+        "value": "ns1.aurora-demo.example.org",
+        "ttl": 300
+       }
+      },
+      {
+       "id": "dns:NS:ns2.aurora-demo.example.org",
+       "type": "dns_record",
+       "label": "NS ns2.aurora-demo.example.org",
+       "layer": 2,
+       "data": {
+        "record_type": "NS",
+        "value": "ns2.aurora-demo.example.org",
+        "ttl": 300
+       }
+      },
+      {
+       "id": "dns:MX:10 mail.aurora-demo.example.org",
+       "type": "dns_record",
+       "label": "MX 10 mail.aurora-demo.example.org",
+       "layer": 2,
+       "data": {
+        "record_type": "MX",
+        "value": "10 mail.aurora-demo.example.org",
+        "ttl": 300
+       }
+      },
+      {
+       "id": "dns:MX:20 mail2.aurora-demo.example.org",
+       "type": "dns_record",
+       "label": "MX 20 mail2.aurora-demo.example.org",
+       "layer": 2,
+       "data": {
+        "record_type": "MX",
+        "value": "20 mail2.aurora-demo.example.org",
+        "ttl": 300
+       }
+      },
+      {
+       "id": "dns:TXT:0:v=spf1 include:_spf.auro",
+       "type": "dns_record",
+       "label": "TXT v=spf1 include:_spf.aurora-demo.ex",
+       "layer": 2,
+       "data": {
+        "record_type": "TXT",
+        "value": "v=spf1 include:_spf.aurora-demo.example.org ~all",
+        "ttl": 300
+       }
+      },
+      {
+       "id": "dns:TXT:1:aurora-demo-site-verific",
+       "type": "dns_record",
+       "label": "TXT aurora-demo-site-verification=SIMU",
+       "layer": 2,
+       "data": {
+        "record_type": "TXT",
+        "value": "aurora-demo-site-verification=SIMULATED",
+        "ttl": 300
+       }
+      },
+      {
+       "id": "asn:64500",
+       "type": "asn",
+       "label": "AS64500 · AURORA-HOSTING-DEMO, ZZ",
+       "layer": 4,
+       "data": {
+        "asn": 64500,
+        "prefix": "2001:db8:a0::/48",
+        "country": "ZZ",
+        "registry": "simulated",
+        "allocated": "2015-01-01",
+        "name": "AURORA-HOSTING-DEMO, ZZ"
+       }
+      },
+      {
+       "id": "cert:dededededededede",
+       "type": "certificate",
+       "label": "www.aurora-demo.example.org",
+       "layer": 4,
+       "data": {
+        "issuer": "Demo Intermediate CA",
+        "not_before": "2026-08-26T09:00:59.563675+00:00",
+        "not_after": "2026-11-18T09:00:59.563689+00:00",
+        "san_count": 3,
+        "verification": {
+         "ok": true,
+         "error": null
+        },
+        "fingerprint_sha256": "dededededededededededededededededededededededededededededededede",
+        "hostname_match": true
+       }
+      },
+      {
+       "id": "sub:api.aurora-demo.example.org",
+       "type": "subdomain",
+       "label": "api.aurora-demo.example.org",
+       "layer": 2,
+       "data": {
+        "verification": "dns_resolved",
+        "sources": [
+         "simulated-ct-index"
+        ],
+        "resolves_to": [
+         "203.0.113.11"
+        ]
+       }
+      },
+      {
+       "id": "sub:staging.aurora-demo.example.org",
+       "type": "subdomain",
+       "label": "staging.aurora-demo.example.org",
+       "layer": 2,
+       "data": {
+        "verification": "dns_resolved",
+        "sources": [
+         "simulated-ct-index"
+        ],
+        "resolves_to": [
+         "198.51.100.77"
+        ]
+       }
+      },
+      {
+       "id": "ip:198.51.100.77",
+       "type": "ip",
+       "label": "198.51.100.77",
+       "layer": 3,
+       "data": {
+        "version": 4
+       }
+      },
+      {
+       "id": "sub:old-portal.aurora-demo.example.org",
+       "type": "subdomain",
+       "label": "old-portal.aurora-demo.example.org",
+       "layer": 2,
+       "data": {
+        "verification": "dns_unresolved",
+        "sources": [
+         "simulated-ct-index"
+        ]
+       }
+      }
+     ],
+     "edges": [
+      {
+       "id": "domain:example.org|parent_of|host:www.aurora-demo.example.org",
+       "source": "domain:example.org",
+       "target": "host:www.aurora-demo.example.org",
+       "relation": "parent_of",
+       "evidence": "www.aurora-demo.example.org is within example.org (name hierarchy)",
+       "source_ref": "Name structure",
+       "kind": "naming",
+       "data": {}
+      },
+      {
+       "id": "host:www.aurora-demo.example.org|A|ip:203.0.113.10",
+       "source": "host:www.aurora-demo.example.org",
+       "target": "ip:203.0.113.10",
+       "relation": "A",
+       "evidence": "A record 203.0.113.10 (TTL 300)",
+       "source_ref": "DNS A lookup",
+       "kind": "observed",
+       "data": {
+        "queried_at": "2026-10-25T08:00:00+00:00"
+       }
+      },
+      {
+       "id": "host:www.aurora-demo.example.org|A|ip:203.0.113.11",
+       "source": "host:www.aurora-demo.example.org",
+       "target": "ip:203.0.113.11",
+       "relation": "A",
+       "evidence": "A record 203.0.113.11 (TTL 300)",
+       "source_ref": "DNS A lookup",
+       "kind": "observed",
+       "data": {
+        "queried_at": "2026-10-25T08:00:00+00:00"
+       }
+      },
+      {
+       "id": "host:www.aurora-demo.example.org|AAAA|ip:2001:db8:a0:1::10",
+       "source": "host:www.aurora-demo.example.org",
+       "target": "ip:2001:db8:a0:1::10",
+       "relation": "AAAA",
+       "evidence": "AAAA record 2001:db8:a0:1::10 (TTL 300)",
+       "source_ref": "DNS AAAA lookup",
+       "kind": "observed",
+       "data": {
+        "queried_at": "2026-10-25T08:00:00+00:00"
+       }
+      },
+      {
+       "id": "domain:example.org|NS|dns:NS:ns1.aurora-demo.example.org",
+       "source": "domain:example.org",
+       "target": "dns:NS:ns1.aurora-demo.example.org",
+       "relation": "NS",
+       "evidence": "NS record ns1.aurora-demo.example.org (TTL 300)",
+       "source_ref": "DNS NS lookup",
+       "kind": "observed",
+       "data": {
+        "queried_at": "2026-10-25T08:00:00+00:00"
+       }
+      },
+      {
+       "id": "domain:example.org|NS|dns:NS:ns2.aurora-demo.example.org",
+       "source": "domain:example.org",
+       "target": "dns:NS:ns2.aurora-demo.example.org",
+       "relation": "NS",
+       "evidence": "NS record ns2.aurora-demo.example.org (TTL 300)",
+       "source_ref": "DNS NS lookup",
+       "kind": "observed",
+       "data": {
+        "queried_at": "2026-10-25T08:00:00+00:00"
+       }
+      },
+      {
+       "id": "domain:example.org|MX|dns:MX:10 mail.aurora-demo.example.org",
+       "source": "domain:example.org",
+       "target": "dns:MX:10 mail.aurora-demo.example.org",
+       "relation": "MX",
+       "evidence": "MX record 10 mail.aurora-demo.example.org (TTL 300)",
+       "source_ref": "DNS MX lookup",
+       "kind": "observed",
+       "data": {
+        "queried_at": "2026-10-25T08:00:00+00:00"
+       }
+      },
+      {
+       "id": "domain:example.org|MX|dns:MX:20 mail2.aurora-demo.example.org",
+       "source": "domain:example.org",
+       "target": "dns:MX:20 mail2.aurora-demo.example.org",
+       "relation": "MX",
+       "evidence": "MX record 20 mail2.aurora-demo.example.org (TTL 300)",
+       "source_ref": "DNS MX lookup",
+       "kind": "observed",
+       "data": {
+        "queried_at": "2026-10-25T08:00:00+00:00"
+       }
+      },
+      {
+       "id": "domain:example.org|TXT|dns:TXT:0:v=spf1 include:_spf.auro",
+       "source": "domain:example.org",
+       "target": "dns:TXT:0:v=spf1 include:_spf.auro",
+       "relation": "TXT",
+       "evidence": "TXT record (TTL 300)",
+       "source_ref": "DNS TXT lookup",
+       "kind": "observed",
+       "data": {
+        "queried_at": "2026-10-25T08:00:00+00:00"
+       }
+      },
+      {
+       "id": "domain:example.org|TXT|dns:TXT:1:aurora-demo-site-verific",
+       "source": "domain:example.org",
+       "target": "dns:TXT:1:aurora-demo-site-verific",
+       "relation": "TXT",
+       "evidence": "TXT record (TTL 300)",
+       "source_ref": "DNS TXT lookup",
+       "kind": "observed",
+       "data": {
+        "queried_at": "2026-10-25T08:00:00+00:00"
+       }
+      },
+      {
+       "id": "ip:203.0.113.10|announced_by|asn:64500",
+       "source": "ip:203.0.113.10",
+       "target": "asn:64500",
+       "relation": "announced_by",
+       "evidence": "Origin AS64500 for prefix 203.0.113.0/24",
+       "source_ref": "Team Cymru IP-to-ASN (DNS)",
+       "kind": "observed",
+       "data": {}
+      },
+      {
+       "id": "ip:203.0.113.11|announced_by|asn:64500",
+       "source": "ip:203.0.113.11",
+       "target": "asn:64500",
+       "relation": "announced_by",
+       "evidence": "Origin AS64500 for prefix 203.0.113.0/24",
+       "source_ref": "Team Cymru IP-to-ASN (DNS)",
+       "kind": "observed",
+       "data": {}
+      },
+      {
+       "id": "ip:2001:db8:a0:1::10|announced_by|asn:64500",
+       "source": "ip:2001:db8:a0:1::10",
+       "target": "asn:64500",
+       "relation": "announced_by",
+       "evidence": "Origin AS64500 for prefix 2001:db8:a0::/48",
+       "source_ref": "Team Cymru IP-to-ASN (DNS)",
+       "kind": "observed",
+       "data": {}
+      },
+      {
+       "id": "ip:203.0.113.10|serves_certificate|cert:dededededededede",
+       "source": "ip:203.0.113.10",
+       "target": "cert:dededededededede",
+       "relation": "serves_certificate",
+       "evidence": "Certificate observed in a TLS handshake with 203.0.113.10:443",
+       "source_ref": "TLS handshake",
+       "kind": "observed",
+       "data": {}
+      },
+      {
+       "id": "domain:example.org|reported_subdomain|sub:api.aurora-demo.example.org",
+       "source": "domain:example.org",
+       "target": "sub:api.aurora-demo.example.org",
+       "relation": "reported_subdomain",
+       "evidence": "Reported by simulated-ct-index (dns resolved)",
+       "source_ref": "simulated-ct-index",
+       "kind": "third_party",
+       "data": {
+        "verification": "dns_resolved"
+       }
+      },
+      {
+       "id": "sub:api.aurora-demo.example.org|A/AAAA|ip:203.0.113.11",
+       "source": "sub:api.aurora-demo.example.org",
+       "target": "ip:203.0.113.11",
+       "relation": "A/AAAA",
+       "evidence": "api.aurora-demo.example.org resolved to 203.0.113.11 during this assessment",
+       "source_ref": "DNS lookup",
+       "kind": "observed",
+       "data": {}
+      },
+      {
+       "id": "cert:dededededededede|covers|sub:api.aurora-demo.example.org",
+       "source": "cert:dededededededede",
+       "target": "sub:api.aurora-demo.example.org",
+       "relation": "covers",
+       "evidence": "api.aurora-demo.example.org appears in the certificate's SAN list",
+       "source_ref": "TLS handshake",
+       "kind": "observed",
+       "data": {}
+      },
+      {
+       "id": "domain:example.org|reported_subdomain|sub:staging.aurora-demo.example.org",
+       "source": "domain:example.org",
+       "target": "sub:staging.aurora-demo.example.org",
+       "relation": "reported_subdomain",
+       "evidence": "Reported by simulated-ct-index (dns resolved)",
+       "source_ref": "simulated-ct-index",
+       "kind": "third_party",
+       "data": {
+        "verification": "dns_resolved"
+       }
+      },
+      {
+       "id": "sub:staging.aurora-demo.example.org|A/AAAA|ip:198.51.100.77",
+       "source": "sub:staging.aurora-demo.example.org",
+       "target": "ip:198.51.100.77",
+       "relation": "A/AAAA",
+       "evidence": "staging.aurora-demo.example.org resolved to 198.51.100.77 during this assessment",
+       "source_ref": "DNS lookup",
+       "kind": "observed",
+       "data": {}
+      },
+      {
+       "id": "domain:example.org|reported_subdomain|sub:old-portal.aurora-demo.example.org",
+       "source": "domain:example.org",
+       "target": "sub:old-portal.aurora-demo.example.org",
+       "relation": "reported_subdomain",
+       "evidence": "Reported by simulated-ct-index (dns unresolved)",
+       "source_ref": "simulated-ct-index",
+       "kind": "third_party",
+       "data": {
+        "verification": "dns_unresolved"
+       }
+      },
+      {
+       "id": "cert:dededededededede|covers|host:www.aurora-demo.example.org",
+       "source": "cert:dededededededede",
+       "target": "host:www.aurora-demo.example.org",
+       "relation": "covers",
+       "evidence": "www.aurora-demo.example.org appears in the certificate's SAN list",
+       "source_ref": "TLS handshake",
+       "kind": "observed",
+       "data": {}
+      }
+     ],
+     "truncated": false,
+     "note": "Edges represent relationships returned by the listed lookups at assessment time. Absence of an edge means nothing was observed, not that no relationship exists."
+    },
+    "limitations": [
+     "DNS answers can differ by resolver, location and time (CDNs, load balancing).",
+     "RDAP/WHOIS data is reported by registries and may be redacted. ASN data comes from Team Cymru's public service.",
+     "IP geolocation is an estimate and does not identify a person's physical location.",
+     "Technology indicators are inferred from headers and markup and are not definitive.",
+     "Subdomains from passive sources are reported, not guaranteed to exist; only those marked 'dns_resolved' resolved when checked."
+    ]
+   },
+   "errors": [],
+   "sources": [
+    {
+     "id": "1d8ec743bee04287ab64630a81219a61",
+     "name": "DNS via simulated resolver",
+     "kind": "dns",
+     "reference": null,
+     "status": "ok",
+     "detail": "9 queries",
+     "retrieved_at": "2026-10-25T09:00:59+00:00"
+    },
+    {
+     "id": "7b21cd5a9ad1442eb49314308d29a690",
+     "name": "RDAP (IP network) (simulated)",
+     "kind": "rdap",
+     "reference": "https://rdap.org/",
+     "status": "ok",
+     "detail": null,
+     "retrieved_at": "2026-10-25T09:00:59+00:00"
+    },
+    {
+     "id": "937e6405d6764f2fb138d1f03f91383c",
+     "name": "TLS handshake (port 443) (simulated)",
+     "kind": "http",
+     "reference": "www.aurora-demo.example.org:443",
+     "status": "ok",
+     "detail": null,
+     "retrieved_at": "2026-10-25T09:00:59+00:00"
+    },
+    {
+     "id": "adede62bc5754761a7ba8a92ceb54645",
+     "name": "simulated-ct-index",
+     "kind": "ct",
+     "reference": "https://example.invalid/ct",
+     "status": "ok",
+     "detail": "3 names reported; 3 checked via DNS",
+     "retrieved_at": "2026-10-25T09:00:59+00:00"
+    },
+    {
+     "id": "c63ba058140742c08fd69308b94e8608",
+     "name": "RDAP (simulated)",
+     "kind": "rdap",
+     "reference": "simulated://rdap/example.org",
+     "status": "ok",
+     "detail": "Registration data retrieved.",
+     "retrieved_at": "2026-10-25T09:00:59+00:00"
+    },
+    {
+     "id": "c8dcc9f6be1c40e28b005223a5ab054a",
+     "name": "Team Cymru IP-to-ASN (simulated)",
+     "kind": "asn",
+     "reference": "simulated://asn",
+     "status": "ok",
+     "detail": null,
+     "retrieved_at": "2026-10-25T09:00:59+00:00"
+    },
+    {
+     "id": "f479da4d5151432c9cdf1875410010ef",
+     "name": "simulated-geoip",
+     "kind": "geoip",
+     "reference": null,
+     "status": "ok",
+     "detail": null,
+     "retrieved_at": "2026-10-25T09:00:59+00:00"
+    }
+   ],
+   "reports": [],
+   "simulated": true
+  },
+  {
+   "id": "demo-image-aurora",
+   "module": "image",
+   "target": "aurora-demo-photo.jpg",
+   "status": "completed",
+   "mode": "demo",
+   "created_at": "2026-10-24T09:01:00+00:00",
+   "finished_at": "2026-10-24T09:02:00+00:00",
+   "duration_ms": 20,
+   "summary": {
+    "headline": "JPEG · 640×420 · GPS present",
+    "gps_present": true,
+    "metadata_present": true,
+    "findings": 6
+   },
+   "findings": [
+    {
+     "id": "36b68a7e16864977b5d325cb12d54c0a",
+     "module": "image",
+     "category": "file",
+     "title": "JPEG image, 640×420px",
+     "detail": "15,359 bytes, MIME type image/jpeg (determined from file content), SHA-256 e8497649c5bb9622…",
+     "severity": "info",
+     "evidence_type": "observed",
+     "source": "Local file inspection"
+    },
+    {
+     "id": "a2dd462e9e5e45c29ed90e6e9a62a235",
+     "module": "image",
+     "category": "gps",
+     "title": "GPS location embedded in metadata",
+     "detail": "The file carries GPS coordinates. Anyone who receives this file can read them. Coordinates are not retained in this record.",
+     "severity": "medium",
+     "evidence_type": "observed",
+     "source": "EXIF GPS IFD"
+    },
+    {
+     "id": "0868eb4a9f9a4d13b5583f7a7f0d2bea",
+     "module": "image",
+     "category": "camera",
+     "title": "Camera information present",
+     "detail": "AuroraDemo Simulated Camera S1",
+     "severity": "info",
+     "evidence_type": "observed",
+     "source": "EXIF"
+    },
+    {
+     "id": "fb5ad617893546e3997246150ab3d234",
+     "module": "image",
+     "category": "identifiers",
+     "title": "Embedded device serial number",
+     "detail": "Potentially identifying field found in EXIF.",
+     "severity": "low",
+     "evidence_type": "observed",
+     "source": "EXIF"
+    },
+    {
+     "id": "e639cf2866724140a1537b706e40e632",
+     "module": "image",
+     "category": "identifiers",
+     "title": "Embedded author / artist name",
+     "detail": "Potentially identifying field found in EXIF.",
+     "severity": "low",
+     "evidence_type": "observed",
+     "source": "EXIF"
+    },
+    {
+     "id": "1f7059571b294fd5a2f69dabecefb350",
+     "module": "image",
+     "category": "timestamps",
+     "title": "Capture timestamp present",
+     "detail": "DateTimeOriginal: 2026:03:14 17:42:09 (self-reported, not verified).",
+     "severity": "info",
+     "evidence_type": "observed",
+     "source": "EXIF"
+    }
+   ],
+   "progress": {
+    "finished": 3,
+    "total": 3,
+    "percent": 100,
+    "current": null
+   },
+   "target_input": "aurora-demo-photo.jpg",
+   "authorization": {
+    "confirmed": false,
+    "confirmed_at": null,
+    "statement": null
+   },
+   "scope": {},
+   "options": {},
+   "steps": [
+    {
+     "key": "validate",
+     "label": "Validate upload (content, size, pixel limits)",
+     "status": "done",
+     "started_at": "2026-10-25T09:00:59+00:00",
+     "finished_at": "2026-10-25T09:00:59+00:00",
+     "detail": null
+    },
+    {
+     "key": "metadata",
+     "label": "Extract metadata locally",
+     "status": "done",
+     "started_at": "2026-10-25T09:00:59+00:00",
+     "finished_at": "2026-10-25T09:00:59+00:00",
+     "detail": null
+    },
+    {
+     "key": "assess",
+     "label": "Assess privacy-relevant fields",
+     "status": "done",
+     "started_at": "2026-10-25T09:00:59+00:00",
+     "finished_at": "2026-10-25T09:00:59+00:00",
+     "detail": null
+    }
+   ],
+   "error": null,
+   "started_at": "2026-10-24T09:01:00+00:00",
+   "result_status": "completed",
+   "result": {
+    "file": {
+     "display_name": "aurora-demo-photo.jpg",
+     "size_bytes": 15359,
+     "sha256": "e8497649c5bb96223bb2c0b5828463a4cc424f9fe60f9dde70f0f515df4cfbe8",
+     "mime_type": "image/jpeg",
+     "detected_format": "JPEG",
+     "extension": "jpg",
+     "extension_matches_content": true,
+     "width": 640,
+     "height": 420,
+     "megapixels": 0.27,
+     "color_mode": "RGB",
+     "frames": 1,
+     "animated": false,
+     "dpi": [
+      72.0,
+      72.0
+     ]
+    },
+    "metadata": {
+     "exif": {
+      "present": true,
+      "camera": {
+       "Make": "AuroraDemo",
+       "Model": "Simulated Camera S1",
+       "Software": "DemoEdit 1.0",
+       "BodySerialNumber": "DEMO-0000-FAKE",
+       "Artist": "Demo Photographer (fictional)"
+      },
+      "capture": {
+       "DateTimeOriginal": "2026:03:14 17:42:09"
+      },
+      "exposure": {
+       "ExposureTime": 0.004,
+       "FNumber": 2.8,
+       "ISOSpeedRatings": 200,
+       "FocalLength": 35.0
+      },
+      "orientation": 1,
+      "fields": {
+       "Make": "AuroraDemo",
+       "Model": "Simulated Camera S1",
+       "Software": "DemoEdit 1.0",
+       "Orientation": 1,
+       "Artist": "Demo Photographer (fictional)",
+       "BodySerialNumber": "DEMO-0000-FAKE",
+       "DateTimeOriginal": "2026:03:14 17:42:09",
+       "FocalLength": 35.0,
+       "ISOSpeedRatings": 200,
+       "ExposureTime": 0.004,
+       "FNumber": 2.8
+      },
+      "sensitive": [
+       "device serial number",
+       "author / artist name"
+      ]
+     },
+     "gps": {
+      "present": true,
+      "latitude": 0.0,
+      "longitude": 0.0,
+      "altitude_m": 10.0,
+      "timestamp": null,
+      "fields": [
+       "GPSAltitude",
+       "GPSAltitudeRef",
+       "GPSLatitude",
+       "GPSLatitudeRef",
+       "GPSLongitude",
+       "GPSLongitudeRef"
+      ],
+      "redacted": false
+     },
+     "xmp": {
+      "present": false
+     },
+     "iptc": {
+      "present": false
+     },
+     "icc_profile": {
+      "present": false
+     },
+     "text_chunks": {
+      "present": false,
+      "entries": {}
+     },
+     "comment": {
+      "present": false
+     },
+     "any_embedded_metadata": true
+    },
+    "privacy_summary": {
+     "sensitive_present": [
+      "GPS location data",
+      "device serial number",
+      "author / artist name",
+      "capture date/time",
+      "editing/camera software"
+     ],
+     "no_embedded_metadata": false,
+     "notes": [
+      "Embedded metadata is self-reported by whatever created or edited the file. It can be edited, copied or fabricated."
+     ]
+    },
+    "reverse_search": [
+     {
+      "name": "Google Lens",
+      "url": "https://lens.google.com/",
+      "note": "Open the page and upload the image yourself."
+     },
+     {
+      "name": "TinEye",
+      "url": "https://tineye.com/",
+      "note": "Open the page and upload the image yourself."
+     },
+     {
+      "name": "Bing Visual Search",
+      "url": "https://www.bing.com/visualsearch",
+      "note": "Open the page and upload the image yourself."
+     },
+     {
+      "name": "Yandex Images",
+      "url": "https://yandex.com/images/",
+      "note": "Open the page and upload the image yourself."
+     }
+    ],
+    "limitations": [
+     "Embedded metadata is self-reported by the device or software that wrote it and can be edited, copied between files or fabricated.",
+     "Metadata does not establish authenticity, authorship or the identity of any person. CyberRecon does not identify people.",
+     "Missing metadata is common (messaging apps and social networks strip it) and is not evidence of anything on its own.",
+     "The links below are third-party services. CyberRecon does not upload your image to them; you choose whether to."
+    ]
+   },
+   "errors": [],
+   "sources": [
+    {
+     "id": "1cf3b643ff3a44a7b50910225025fc6a",
+     "name": "Uploaded file (local analysis) (simulated)",
+     "kind": "file",
+     "reference": null,
+     "status": "ok",
+     "detail": "Analysed in memory; the image itself is not stored.",
+     "retrieved_at": "2026-10-25T09:00:59+00:00"
+    }
+   ],
+   "reports": [],
+   "simulated": true
+  }
+ ]
+}

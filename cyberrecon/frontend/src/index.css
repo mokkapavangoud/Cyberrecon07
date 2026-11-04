@@ -1,0 +1,65 @@
+@import "@fontsource-variable/bricolage-grotesque/index.css";
+@import "@fontsource-variable/hanken-grotesk/index.css";
+@import "@fontsource/jetbrains-mono/400.css";
+@import "@fontsource/jetbrains-mono/500.css";
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bricolage Grotesque Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Hanken Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-ink: #0a0e0d;
+  --color-canvas: #0e1412;
+  --color-panel: #141c19;
+  --color-raised: #1a2420;
+  --color-line: #26332e;
+  --color-line-strong: #34443d;
+  --color-text: #e4ebe8;
+  --color-muted: #8a9b94;
+  --color-faint: #5d6e67;
+  --color-emerald: #2fbf8f;
+  --color-emerald-dim: #1c6b52;
+  --color-cyan: #3db8d4;
+  --color-amber: #d6a64b;
+  --color-rose: #e0685f;
+  --color-violet: #9b8cd9;
+}
+
+:root { color-scheme: dark; }
+html, body, #root { height: 100%; }
+body {
+  background: var(--color-ink); color: var(--color-text); font-family: var(--font-sans); font-size: 15px; line-height: 1.55;
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+}
+h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.02em; font-weight: 600; line-height: 1.1; }
+code, .mono { font-family: var(--font-mono); font-size: 0.86em; }
+::selection { background: color-mix(in oklab, var(--color-emerald) 35%, transparent); }
+
+:focus-visible { outline: 2px solid var(--color-cyan); outline-offset: 2px; border-radius: 4px; }
+button, a, input, select, textarea { transition: background-color .15s, border-color .15s, color .15s; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: var(--color-line-strong); border-radius: 10px; border: 2px solid var(--color-ink); }
+
+.skeleton { background: linear-gradient(90deg, var(--color-panel) 25%, var(--color-raised) 50%, var(--color-panel) 75%); background-size: 200% 100%; animation: shimmer 1.4s infinite linear; border-radius: 6px; }
+@keyframes shimmer { to { background-position: -200% 0; } }
+
+/* The hero diagram draws itself once. Everything is static afterwards and nothing sweeps or pulses like a live scan. */
+.draw-in { stroke-dasharray: var(--len, 400); stroke-dashoffset: var(--len, 400); animation: draw 1.6s ease-out forwards; animation-delay: var(--delay, 0s); }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+.fade-in { opacity: 0; animation: fade .6s ease-out forwards; animation-delay: var(--delay, 0s); }
+@keyframes fade { to { opacity: 1; } }
+@keyframes dialog-in { from { opacity: 0; transform: translate(-50%, -48%) scale(.98); } to { opacity: 1; transform: translate(-50%, -50%) scale(1); } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+  .draw-in { stroke-dashoffset: 0; }
+  .fade-in { opacity: 1; }
+}
+
+/* React Flow theming */
+.react-flow { --xy-background-color: transparent; --xy-edge-stroke-default: #3a4d45; --xy-controls-button-background-color-default: var(--color-raised); --xy-controls-button-color-default: var(--color-text); --xy-controls-button-border-color-default: var(--color-line); --xy-minimap-background-color-default: var(--color-panel); }
+.react-flow__attribution { display: none; }
+.react-flow .react-flow__minimap { background-color: var(--color-panel); border: 1px solid var(--color-line); border-radius: 8px; }
+.react-flow .react-flow__controls-button { background: var(--color-raised); border-bottom-color: var(--color-line); fill: var(--color-text); color: var(--color-text); }
+.react-flow .react-flow__controls-button:hover { background: #202c27; }

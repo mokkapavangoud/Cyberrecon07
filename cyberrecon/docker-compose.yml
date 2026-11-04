@@ -1,0 +1,20 @@
+# NOT executed in the environment this project was built in. Read docs/SECURITY.md ("Egress restriction") before exposing this.
+services:
+  cyberrecon:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"   # bound to localhost on purpose; put an authenticating reverse proxy in front for anything else
+    environment:
+      CYBERRECON_RATE_LIMIT_PER_MINUTE: "30"
+      # CYBERRECON_TARGET_ALLOWLIST: "your-company.com"
+      # CYBERRECON_SCREENSHOT_PROXY: "http://egress-proxy:3128"
+    volumes:
+      - cyberrecon-data:/data
+    read_only: true
+    tmpfs: ["/tmp"]
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    # Egress: attach this service to a network whose outbound traffic is filtered at the host/firewall level
+    # (deny RFC1918, loopback, link-local 169.254.0.0/16, ULA/link-local IPv6). See docs/SECURITY.md.
+volumes:
+  cyberrecon-data:
